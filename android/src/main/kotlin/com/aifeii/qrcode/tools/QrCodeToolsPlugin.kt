@@ -49,6 +49,8 @@ class QrCodeToolsPlugin : FlutterPlugin, MethodCallHandler {
             val hints = Hashtable<DecodeHintType, Any>()
             val decodeFormats = ArrayList<BarcodeFormat>()
             decodeFormats.add(BarcodeFormat.PDF_417)
+            decodeFormats.add(BarcodeFormat.AZTEC)
+            decodeFormats.add(BarcodeFormat.QR_CODE)
             hints[DecodeHintType.POSSIBLE_FORMATS] = decodeFormats
             hints[DecodeHintType.CHARACTER_SET] = "utf-8"
             hints[DecodeHintType.TRY_HARDER] = true
